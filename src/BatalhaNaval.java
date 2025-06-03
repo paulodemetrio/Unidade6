@@ -8,7 +8,7 @@ public class BatalhaNaval {
         char[][] tabuleiroExibe = new char[8][8];
         char[][] tabuleiroRegistra = new char[8][8];
         int[] acertosEtentativas = new int[2];
-        int acertos = 0, tentativas = 5;
+        int acertos = 0, tentativas = 30;
         populaTabuleiro(tabuleiroExibe);
         populaTabuleiro(tabuleiroRegistra);
         registrarNavios(tabuleiroRegistra, random);
