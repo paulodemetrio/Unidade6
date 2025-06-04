@@ -3,6 +3,10 @@ import java.util.Random;
 
 public class BatalhaNaval {
     public static void main(String[] args) {
+        new BatalhaNaval();
+    }
+    
+    private BatalhaNaval(){
         Scanner scan = new Scanner(System.in);
         Random random = new Random();
         char[][] tabuleiroExibe = new char[8][8];
@@ -20,7 +24,7 @@ public class BatalhaNaval {
         for (int i = 0; i < tabuleiro.length; i++) {
             for (int j = 0; j < tabuleiro.length; j++) {
                 tabuleiro[i][j] = '~';
-            }
+            } 
         }
         return tabuleiro;
     }
@@ -43,7 +47,7 @@ public class BatalhaNaval {
         menu(tentativas);
         do {
             if (tentativas == 0 && acertos < 10) {
-                System.out.println("Suas tentativas acabaram e ainda há navios não afundados.");
+                System.out.println("Suas tentativas acabaram e ainda há navios não afundados. Você perdeu!");
                 System.out.println("Navios encontrados: " + acertos + "/10");
                 System.out.println("Posições dos navios:");
                 mostrarTabuleiro(tabuleiroRegistra);
@@ -51,7 +55,7 @@ public class BatalhaNaval {
 
             } else if (acertos == 10) {
                 System.out.println("****************");
-                System.out.println("Parabéns! Você afundou todos os navios!");
+                System.out.println("Parabéns! Você afundou todos os navios e venceu!");
                 System.out.println("Navios encontrados: " + acertos + "/10");
                 mostrarTabuleiro(tabuleiroRegistra);
                 break;
